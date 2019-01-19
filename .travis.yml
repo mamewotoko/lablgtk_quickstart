@@ -1,7 +1,11 @@
 language: c
 sudo: required
-install: bash -ex .travis-ocaml.sh
-script: "eval $(opam env); env; make"
+install:
+  - bash -ex .travis-ocaml.sh
+  - eval $(opam env); opam install -y ocamlfind
+  - eval $(opam env); sh setup-opam
+script:
+  - eval $(opam env); env; make
 env:
   # - OCAML_VERSION=4.02
   # - OCAML_VERSION=4.03
