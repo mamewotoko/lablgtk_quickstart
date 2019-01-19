@@ -1,4 +1,4 @@
-lablgtk_quickstart
+lablgtk_quickstart [![Build Status](https://travis-ci.org/mamewotoko/lablgtk_quickstart.svg?branch=master)](https://travis-ci.org/mamewotoko/lablgtk_quickstart)
 ==================
 
 ![screenshot](doc/screenshot.png)
@@ -7,6 +7,7 @@ Build
 -------
 
 ### MacOS
+
 1. install [opam](https://opam.ocaml.org/doc/Install.html)
 2. install gtk
 
@@ -27,6 +28,7 @@ Build
     ```
 
 ### Vagrant (ubuntu 16.04)
+
 1. install [vagrant](https://www.vagrantup.com/downloads.html)
 2. start vagrant box
 
@@ -61,6 +63,7 @@ Run
 
 References
 ----------
+
 * [http://lablgtk.forge.ocamlcore.org/](http://lablgtk.forge.ocamlcore.org/)
 * [Introduction to Gtk](https://ocaml.org/learn/tutorials/introduction_to_gtk.html)
 * [mmottl/ocaml-makefile](https://github.com/mmottl/ocaml-makefile)
