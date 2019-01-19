@@ -1,8 +1,6 @@
+language: c
 sudo: required
-language: python
-python:
-  - "3.6"
-install: "wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-ocaml.sh; bash -ex .travis-ocaml.sh"
+install: bash -ex .travis-ocaml.sh
 script: make
 env:
   # - OCAML_VERSION=4.02
