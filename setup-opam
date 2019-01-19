@@ -1,0 +1,10 @@
+#! /bin/bash
+if [ $(uname) = Darwin ]; then
+   brew install gtk
+else
+    # ubuntu
+    sudo apt-get install -y libgtk2.0-dev
+fi  
+opam install -y depext
+opam depext -y conf-m4.1
+opam install -y lablgtk
