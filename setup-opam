@@ -7,4 +7,4 @@ else
 fi  
 opam install -y depext
 opam depext -y conf-m4.1
-opam install -y lablgtk
+opam install -y lablgtk ocamlfind
