@@ -1,4 +1,5 @@
 ._d
+_build
 .vagrant
 *.cm[ioxat]
 *.o

@@ -1,5 +1,14 @@
-language: c
+dist: xenial
 sudo: required
+addons:
+  apt:
+    sources:
+    - ppa:mc3man/trusty-media
+    packages:
+    - xvfb
+    - x11-apps
+    - imagemagick
+    - ffmpeg
 install:
   - bash -ex .travis-ocaml.sh
   - eval $(opam env); sh setup-opam
@@ -11,8 +20,8 @@ script:
   - chmod +x gdrive
   - curl -fsSLO https://raw.githubusercontent.com/mamewotoko/xvfb-screenshooter/master/xvfb-screenshooter.sh
   - chmod +x xvfb-screenshooter.sh
-  - "./xvfb-screenshooter.sh timeout 10s dune exec src/main.exe"
-  - sh ci/upload.sh
+  - ./xvfb-screenshooter.sh timeout 10s dune exec src/main.exe
+  - sh -x ci/upload.sh
   
 env:
   # - OCAML_VERSION=4.02
