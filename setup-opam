@@ -1,5 +1,7 @@
 #! /bin/bash
-if [ $(uname) = Darwin ]; then
+# ocaml4.07.0
+
+if [ "$(uname)" = Darwin ]; then
    brew install gtk
 else
     # ubuntu
@@ -7,4 +9,6 @@ else
 fi  
 opam install -y depext
 opam depext -y conf-m4.1
+#opam install -y lablgtk3 ocamlfind
 opam install -y lablgtk ocamlfind
+# eval $(opam env)
