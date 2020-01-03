@@ -1,6 +1,6 @@
 ._d
 .vagrant
-.cm[ioxa]
-.o
-./gtk_app
+*.cm[ioxat]
+*.o
+gtk_app
 
