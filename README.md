@@ -54,11 +54,32 @@ Build
     make
     ```
 
+### Option: build with dune 
+
+1. install dune
+
+    ```
+    opam install dune
+    ```
+
+2. build app
+
+    ```
+    dune build main.exe
+    ```
+
 Run
 ----
 
 ```
 ./gtk_app
+```
+
+Option: run with dune
+---------------------
+
+```
+dune run main.exe
 ```
 
 References
