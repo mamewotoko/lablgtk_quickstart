@@ -54,20 +54,6 @@ Build
     make
     ```
 
-### Option: build with dune 
-
-1. install dune
-
-    ```
-    opam install dune
-    ```
-
-2. build app
-
-    ```
-    dune build main.exe
-    ```
-
 Run
 ----
 
@@ -75,12 +61,17 @@ Run
 ./gtk_app
 ```
 
-Option: run with dune
----------------------
+Clean
+-----
 
 ```
-dune run main.exe
+make clean
 ```
+
+Appendix
+--------
+
+* [Build, Run with dune](README_dune.md)
 
 References
 ----------
