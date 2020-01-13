@@ -13,7 +13,7 @@ install:
   - bash -ex .travis-ocaml.sh
   - eval $(opam env); sh setup-opam
 script:
-  - sh build.sh
+  - sh ci/build.sh
 env:
   - OCAML_VERSION=4.02 LABLGTK=lablgtk
   # - OCAML_VERSION=4.03
