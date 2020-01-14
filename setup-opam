@@ -1,14 +1,12 @@
 #! /bin/bash
 # ocaml4.07.0
 if [ -z "$LABLGTK" ]; then
-    LABLGTK=lablgtk2
+    LABLGTK=lablgtk
 fi 
 
 if [ "$(uname)" = Darwin ]; then
     case "$LABLGTK" in
         lablgtk)
-            brew install gtk+;;
-        lablgtk2)
             brew install gtk+;;
         lablgtk3)
             brew install gtk+3;;
@@ -18,14 +16,11 @@ else
     case "$LABLGTK" in
         lablgtk)
             sudo apt-get install -y libgtk2.0-dev;;
-        lablgtk2)
-            sudo apt-get install -y libgtk2.0-dev;;
         lablgtk3)
             sudo apt-get install -y libgtk-3-0;;
     esac
 fi  
 opam install -y depext
 opam depext -y conf-m4.1
-#opam install -y lablgtk3 ocamlfind
 opam install -y lablgtk ocamlfind dune
 # eval $(opam env)

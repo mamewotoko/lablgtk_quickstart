@@ -6,7 +6,7 @@ eval $(opam env)
 sed -i.bak "s/lablgtk2/$LABLGTK/" src/dune
 dune build src/main.exe
 
-if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+if [ "$TRAVIS_OS_NAME" = "osx" ]; then
     exit 0
 fi
     
