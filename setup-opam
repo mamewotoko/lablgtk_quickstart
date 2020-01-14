@@ -6,7 +6,7 @@ fi
 
 if [ "$(uname)" = Darwin ]; then
     case "$LABLGTK" in
-        lablgtk)
+        lablgtk2)
             brew install gtk+;;
         lablgtk3)
             brew install gtk+3;;
@@ -14,7 +14,7 @@ if [ "$(uname)" = Darwin ]; then
 else
     # ubuntu
     case "$LABLGTK" in
-        lablgtk)
+        lablgtk2)
             sudo apt-get install -y libgtk2.0-dev;;
         lablgtk3)
             sudo apt-get install -y libgtk-3-0;;
