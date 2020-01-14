@@ -17,7 +17,7 @@ else
         lablgtk)
             sudo apt-get install -y libgtk2.0-dev;;
         lablgtk3)
-            sudo apt-get install -y libgtk-3-0;;
+            sudo apt-get install -y libexpat1-dev libgtk-3-dev;;
     esac
 fi
 

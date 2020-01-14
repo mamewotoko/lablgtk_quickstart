@@ -15,7 +15,7 @@ install:
 script:
   - sh ci/build.sh
 env:
-  - OCAML_VERSION=4.02 LABLGTK=lablgtk
+  # - OCAML_VERSION=4.02 LABLGTK=lablgtk
   # - OCAML_VERSION=4.03
   # - OCAML_VERSION=4.04
   # - OCAML_VERSION=4.05
