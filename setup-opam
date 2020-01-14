@@ -6,7 +6,7 @@ fi
 
 if [ "$(uname)" = Darwin ]; then
     case "$LABLGTK" in
-        lablgtk2)
+        lablgtk)
             brew install gtk+;;
         lablgtk3)
             brew install gtk+3;;
@@ -14,13 +14,14 @@ if [ "$(uname)" = Darwin ]; then
 else
     # ubuntu
     case "$LABLGTK" in
-        lablgtk2)
+        lablgtk)
             sudo apt-get install -y libgtk2.0-dev;;
         lablgtk3)
             sudo apt-get install -y libgtk-3-0;;
     esac
-fi  
+fi
+
 opam install -y depext
 opam depext -y conf-m4.1
-opam install -y lablgtk ocamlfind dune
+opam install -y $LABLGTK ocamlfind dune
 # eval $(opam env)
