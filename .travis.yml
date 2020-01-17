@@ -1,5 +1,6 @@
 dist: xenial
 sudo: required
+language: c
 addons:
   apt:
     sources:
@@ -9,7 +10,7 @@ addons:
     - x11-apps
     - imagemagick
     - ffmpeg
-install:
+before_install:
   - bash -ex .travis-ocaml.sh
   - eval $(opam env); sh setup-opam
 script:
