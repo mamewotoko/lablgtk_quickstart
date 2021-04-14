@@ -1,7 +1,7 @@
 #! /bin/bash
 # ocaml4.07.0
 if [ -z "$LABLGTK" ]; then
-    LABLGTK=lablgtk
+    LABLGTK=lablgtk3
 fi 
 
 if [ "$(uname)" = Darwin ]; then
@@ -17,7 +17,7 @@ else
         lablgtk)
             sudo apt-get install -y libgtk2.0-dev;;
         lablgtk3)
-            sudo apt-get install -y libexpat1-dev libgtk-3-dev;;
+            sudo apt-get install -y libexpat1-dev libgtk-3-dev pkg-config;;
     esac
 fi
 
