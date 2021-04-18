@@ -1,3 +1,3 @@
 (executable
  (name main)
- (libraries lablgtk2))
+ (libraries lablgtk3))
