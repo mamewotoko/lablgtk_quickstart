@@ -12,8 +12,9 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  #config.vm.box = "ubuntu/xenial64"
-  config.vm.box = "ubuntu/bionic64"
+  # config.vm.box = "ubuntu/xenial64"
+  # config.vm.box = "ubuntu/bionic64"
+  config.vm.box = "ubuntu/focal64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -65,9 +66,12 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
-    add-apt-repository ppa:avsm/ppa
-    apt-get update
-    apt-get install -y opam
-    sudo -u ubuntu opam init --auto-setup
+     cd /vagrant
+     apt-get update
+     apt install -y bubblewrap build-essential curl git m4 unzip
+     # install opam2
+     echo "" | sh -c "$(curl -sL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)"
+
+     sudo -iu vagrant bash -c "cd /vagrant ; ./setup.sh"
   SHELL
 end

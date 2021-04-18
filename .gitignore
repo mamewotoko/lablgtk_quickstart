@@ -4,4 +4,4 @@ _build
 *.cm[ioxat]
 *.o
 gtk_app
-
+/output/
