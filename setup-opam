@@ -18,7 +18,7 @@ else
     case "$LABLGTK" in
         lablgtk)
             sudo apt-get install -y libgtk2.0-dev
-            sed -i -e 's/lablgtk3/lablgtk/' src/dune 
+            sed -i -e 's/lablgtk3/lablgtk2/' src/dune 
             ;;
         lablgtk3)
             sudo apt-get install -y libexpat1-dev libgtk-3-dev pkg-config
