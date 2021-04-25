@@ -11,6 +11,8 @@ addons:
     - imagemagick
     - ffmpeg
 before_install:
+  - git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
+  - git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow
   - bash -ex .travis-ocaml.sh
   - eval $(opam env); sh setup-opam
 script:
