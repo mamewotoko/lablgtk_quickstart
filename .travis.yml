@@ -10,11 +10,9 @@ addons:
     - x11-apps
     - imagemagick
     - ffmpeg
-before_install:
-  - git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow
-  - git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow
-  - bash -ex .travis-ocaml.sh
-  - eval $(opam env); sh setup-opam
+before_install: |
+  bash -ex .travis-ocaml.sh
+  eval $(opam env); sh setup-opam
 script:
   - sh ci/build.sh
 after_script:
@@ -28,3 +26,5 @@ env:
 os:
   - linux
   - osx
+
+osx_image: xcode11
