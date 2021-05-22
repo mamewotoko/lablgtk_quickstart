@@ -1,0 +1,21 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: build lablgtk
+      run: |
+        cd lablgtk
+        bash -ex .travis-ocaml.sh
+        eval $(opam env)
+        ./setup.sh
+        sh setup-opam
+        make
+      env:
+        OCAML_VERSION: 4.11
+        TRAVIS_OS_NAME: linux
+        TRAVIS_DIST: focal
