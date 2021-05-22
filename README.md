@@ -1,4 +1,4 @@
-lablgtk_quickstart [![Build Status](https://travis-ci.org/mamewotoko/lablgtk_quickstart.svg?branch=master)](https://travis-ci.org/mamewotoko/lablgtk_quickstart)
+lablgtk_quickstart [![Build Status](https://travis-ci.org/mamewotoko/lablgtk_quickstart.svg?branch=master)](https://travis-ci.org/mamewotoko/lablgtk_quickstart) [![build](https://github.com/mamewotoko/lablgtk_quickstart/actions/workflows/build.yml/badge.svg)](https://github.com/mamewotoko/lablgtk_quickstart/actions/workflows/build.yml)
 ==================
 
 ![screenshot](doc/screenshot.png)
