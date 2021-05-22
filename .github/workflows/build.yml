@@ -9,7 +9,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: build lablgtk
       run: |
-        cd lablgtk
         bash -ex .travis-ocaml.sh
         eval $(opam env)
         ./setup.sh
