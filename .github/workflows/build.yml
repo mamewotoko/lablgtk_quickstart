@@ -29,9 +29,9 @@ jobs:
         bash -ex .travis-ocaml.sh
         eval $(opam env)
         ./setup.sh
-        dune
+        dune build
         # check
-        ls -l gtk_app
+        ls -l ./_build/default/src/main.exe
       env:
         OCAML_VERSION: 4.11
         TRAVIS_OS_NAME: linux

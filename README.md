@@ -14,7 +14,7 @@ Build
     ```bash
     brew install gtk
     ```
-    
+
 3. install opam packages
 
     ```bash
@@ -68,8 +68,16 @@ Clean
 make clean
 ```
 
-Appendix
---------
+
+
+Appendix: build with dune
+--------------------------
+
+```
+dune build src/main.exe
+```
+
+then executable will be built as `./_build/default/src/main.exe`
 
 * [Build, Run with dune](README_dune.md)
 
@@ -81,5 +89,5 @@ References
 * [mmottl/ocaml-makefile](https://github.com/mmottl/ocaml-makefile)
 
 ----
-Takashi Masuyama < mamewotoko@gmail.com >  
+Takashi Masuyama < mamewotoko@gmail.com >
 https://mamewo.ddo.jp/
